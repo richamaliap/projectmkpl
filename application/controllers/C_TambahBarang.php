@@ -98,35 +98,6 @@ class C_TambahBarang extends CI_Controller {
         }
     }
 
-    public function TambahBarangAdmin() {
-        $this->load->view('Head/V_Header');
-        $this->load->view('Head/V_MenuAdmin');
-        if (filter_input(INPUT_POST, "cancel")) {
-            redirect('C_Barang/ShowBarang');
-        } else if (filter_input(INPUT_POST, "submit")) {
-            $this->checkFormTambahBarang();
-            $this->checkLokasi2();
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('V_TambahBarangAdmin');
-            } else {
-                $Divisi = $this->getDivisi();
-                $SerialNumber = $this->getSerialNumber();
-                $TipeBarang = $this->getTipeBarang();
-                $NamaBarang = $this->getNamaBarang();
-                $Lokasi1 = $this->getLokasi1();
-                $Lokasi2 = $this->getLokasi2();
-                $TanggalBuat = $this->getLastUpdate();
-                $LastUpdate = $TanggalBuat;
-                $Status = $this->getStatus();
-
-                $result = $this->M_Barang->CreateBarang($SerialNumber, $Divisi, $TipeBarang, $NamaBarang, $Lokasi1, $Lokasi2, $TanggalBuat, $LastUpdate, $Status);
-                $this->checkResult($result);
-            }
-        } else {
-            $this->load->view('V_TambahBarangAdmin');
-        }
-        $this->load->view('Foot/V_Footer');
-    }
 
     public function TambahBarang() {
         $this->load->view('Head/V_Header');

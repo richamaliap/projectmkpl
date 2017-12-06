@@ -73,7 +73,16 @@ class C_KirimBarang extends CI_Controller {
         $TanggalKirim = mdate('%Y-%m-%d %h:%i:%s', now());
         return $TanggalKirim;
     }
+    
+    public function getPengirim() {
+        $Pengirim = strtoupper(filter_input(INPUT_POST, "Pengirim"));
+        return $Pengirim;
+    }
 
+    public function getPenerima() {
+        $Penerima = strtoupper(filter_input(INPUT_POST, "Penerima"));
+        return $Penerima;
+    }
 
     public function getStatus() {
         $Status = 'Pindah';
@@ -135,5 +144,6 @@ class C_KirimBarang extends CI_Controller {
         }
         $this->load->view('Foot/V_Footer');
     }
+
 
 }

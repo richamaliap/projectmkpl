@@ -131,11 +131,12 @@ class C_KirimBarang extends CI_Controller {
                 $LastUpdate = $this->getLastUpdate();
                 $Penerima = $this->getPenerima();
                 $Pengirim = $this->getPengirim();
+                $Paket = $this->getPalet();
                 $TanggalKirim = $this->getTanggalKirim();
                 $Status = $this->getStatus();
 
                 $result1 = $this->M_Barang->Update($SerialNumber, $Divisi, $TipeBarang, $NamaBarang, $Lokasi1, $Lokasi2, $LastUpdate, $Status);
-                $result2 = $this->M_Barang->Transfer($ID, $SerialNumber, $Divisi, $TipeBarang, $NamaBarang, $Lokasi1, $LokasiTujuan, $TanggalKirim, $Pengirim, $Penerima);
+                $result2 = $this->M_Barang->Transfer($ID, $SerialNumber, $Divisi, $TipeBarang, $NamaBarang, $Lokasi1, $LokasiTujuan, $TanggalKirim, $Pengirim, $Penerima, $Paket);
 
                 $this->checkResult($result1, $result2);
             }

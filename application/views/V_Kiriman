@@ -17,6 +17,8 @@ $header = "<thead>
             <th>Serial Number</th>
             <th>Tipe Barang</th>
             <th>Nama Barang</th>
+            <th>Pengirim</th>
+            <th>Penerima</th>
             <th>Lokasi Asal</th>
             <th>Lokasi Tujuan</th>
             <th>Tanggal Kirim</th>
@@ -28,6 +30,8 @@ $footer = "<tfoot>
             <th>Serial Number</th>
             <th>Tipe Barang</th>
             <th>Nama Barang</th>
+            <th>Pengirim</th>
+            <th>Penerima</th>
             <th>Lokasi Asal</th>
             <th>Lokasi Tujuan</th>
             <th>Tanggal Kirim</th>

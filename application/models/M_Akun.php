@@ -7,8 +7,8 @@
  */
 class M_Akun extends CI_Model {
 
-    public function Count($Email, $Password) {
-        $data = array('Email' => $Email, 'Password' => $Password);
+    public function Count($NIP, $Password) {
+        $data = array('NIP' => $NIP, 'Password' => $Password);
         $this->db->where($data);
         $this->db->from('akun');
         $count = $this->db->count_all_results();

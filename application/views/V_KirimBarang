@@ -55,6 +55,24 @@ echo "</tr>";
 
 echo "<tr>";
 echo "<td>";
+echo "Nama Pengirim:";
+echo "</td>";
+echo "<td>";
+echo form_input('Pengirim', set_value('Pengirim', ''));
+echo "</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "<td>";
+echo "Nama Penerima:";
+echo "</td>";
+echo "<td>";
+echo form_input('Penerima', set_value('Penerima', ''));
+echo "</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "<td>";
 echo "Lokasi Asal:";
 echo "</td>";
 echo "<td>";

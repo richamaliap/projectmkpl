@@ -14,15 +14,13 @@ class C_Login extends CI_Controller {
 
     public function validate_credentials() {
         if (filter_input(INPUT_POST, "login")) {
-            $Email = filter_input(INPUT_POST, "NIP");
+            $Email = filter_input(INPUT_POST, "email");
             $Password = filter_input(INPUT_POST, "Password");
 
-            $Count = $this->M_Akun->Count($NIP, $Password);
+            $Count = $this->M_Akun->Count($email, $Password);
             if ($Count != 0) {
-                $Email = $this->session->userdata('NIP');
-                if (filter_input(INPUT_POST, "NIP") == '12356') {
-                    redirect('C_Site/admin');
-                } else {
+                $Email = $this->session->userdata('email');
+                if (filter_input(INPUT_POST, "email") == $email) {
                     redirect('C_Site/petugas');
                 }
             } else {

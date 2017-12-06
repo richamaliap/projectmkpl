@@ -128,8 +128,6 @@ foreach ($query as $row) {
     echo "</td><td>";
     echo $row->Penerima;
     echo "</td><td>";
-    echo $row->Peket;
-    echo "</td><td>";
     echo $row->Lokasi1;
     echo "</td><td>";
     echo $row->Lokasi2;

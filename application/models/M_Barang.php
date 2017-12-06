@@ -33,5 +33,12 @@ class M_Barang extends CI_Model {
         $query = $this->db->get('barang');
         return $query->result();
     }
+    
+    public function ShowDivisi($Divisi) {
+        $this->db->where('Divisi', $Divisi);
+        $this->db->order_by('LastUpdate', 'DESC');
+        $query = $this->db->get('barang');
+        return $query->result();
+    }
 
 }

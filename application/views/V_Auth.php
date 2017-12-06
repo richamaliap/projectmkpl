@@ -5,7 +5,7 @@
     $Password = 'placeholder="Password"';
 
     echo form_open("C_Login/validate_credentials");
-    echo form_input("Email", "", $Email);
+    echo form_input("NIP", "", $NIP);
     echo form_password("Password", "", $Password);
     echo form_submit("login", "Login");
     echo anchor("C_Akun/AkunBaru", "Buat Akun");
